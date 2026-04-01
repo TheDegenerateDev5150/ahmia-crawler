@@ -48,9 +48,11 @@ class OnionSpider(CrawlSpider):
             # 'http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/add/onionsadded/',\
             # 'http://juhanurmihxlp77nkq76byazcldy2hlmovfu2epvl5ankdibsot4csyd.onion/add/onionsadded/'
             self.start_urls = [url.strip() for url in seedlist.split(',') if url.strip()]
+            self.logger.info("Using 'seedlist' argument with %d URLs.", len(self.start_urls))
         else:
             from scrapy.utils.project import get_project_settings # defer to project settings
             self.start_urls = get_project_settings().get("SEEDLIST", [])
+            self.logger.info("Using SEEDLIST from settings.py with %d URLs.", len(self.start_urls))
 
     def limit_links_per_domain(self, links):
         """ Limit link extraction to 50,000 per one domain """
