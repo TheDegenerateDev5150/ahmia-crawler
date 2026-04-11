@@ -57,8 +57,8 @@ SCHEDULER_MEMORY_QUEUE = "scrapy.squeues.FifoMemoryQueue"
 # https://docs.scrapy.org/en/latest/topics/broad-crawls.html
 SCHEDULER_PRIORITY_QUEUE = "scrapy.pqueues.ScrapyPriorityQueue"
 #SCHEDULER_PRIORITY_QUEUE = "scrapy.pqueues.DownloaderAwarePriorityQueue"
-CONCURRENT_REQUESTS = 100
-CONCURRENT_REQUESTS_PER_DOMAIN = 10
+CONCURRENT_REQUESTS = 200
+CONCURRENT_REQUESTS_PER_DOMAIN = 20
 REACTOR_THREADPOOL_MAXSIZE = CONCURRENT_REQUESTS
 DOWNLOAD_MAXSIZE = 5242880 # Max-limit in bytes, 5 MB, 5*1024*1024 = 5,242,880 bytes
 COOKIES_ENABLED = False

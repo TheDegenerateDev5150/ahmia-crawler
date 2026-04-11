@@ -77,7 +77,7 @@ class CustomElasticSearchPipeline:
         finally:
             self.items_buffer = []
 
-    def close_spider(self):
+    def close_spider(self, spider):
         """
         Called when the spider is closed. Flushes remaining items to Elasticsearch.
         """
