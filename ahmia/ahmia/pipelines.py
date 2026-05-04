@@ -26,7 +26,7 @@ class CustomElasticSearchPipeline:
             verify_certs=False,
             ssl_show_warn=False,
             max_retries=5,
-            request_timeout=30,
+            request_timeout=60,
         )
 
         self.index_name = self.settings.get('ELASTICSEARCH_INDEX')
