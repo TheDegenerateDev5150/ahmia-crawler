@@ -28,7 +28,7 @@ ELASTICSEARCH_CA_CERTS = config('ES_CA_CERTS',
 VERIFY_CERTS = config('VERIFY_CERTS', default=True)
 SSL_SHOW_WARN = config('SSL_SHOW_WARN', default=True)
 
-ELASTICSEARCH_BUFFER_LENGTH = 500
+ELASTICSEARCH_BUFFER_LENGTH = 100
 
 # Identify as normal Tor Browser
 #USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0"
